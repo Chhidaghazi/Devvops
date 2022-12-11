@@ -17,10 +17,15 @@ public class Voyageur implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idVoyageur;
-	
+
 	String nomVoyageur;
 
-	
+
+	public Voyageur(Long idVoyageur, String nomVoyageur) {
+		this.idVoyageur = idVoyageur;
+		this.nomVoyageur = nomVoyageur;
+	}
+
 	public List<Voyage> getMesvoyages() {
 		return mesvoyages;
 	}
